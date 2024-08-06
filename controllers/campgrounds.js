@@ -8,7 +8,7 @@ const geocoder = mbxGeocoding({ accessToken: mapboxToken });
 const moment = require("moment");
 
 module.exports.index = async (req, res) => {
-	const campgrounds = await Campground.find();
+	const campgrounds = await Campground.find().sort({ createdAt: -1 });
 	res.render("campgrounds/index", { campgrounds, moment });
 };
 
