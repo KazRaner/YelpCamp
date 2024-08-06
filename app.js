@@ -123,6 +123,7 @@ app.use(
 			mediaSrc: ["https://res.cloudinary.com/dz74jeww6/"],
 			childSrc: ["blob:"],
 		},
+		crossOriginEmbedderPolicy: false,
 	})
 );
 
